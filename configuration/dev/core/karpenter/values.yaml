@@ -1,0 +1,90 @@
+# values.yaml for Karpenter Helm Chart
+
+# -- Cluster settings
+settings:
+  clusterName: <YOUR_CLUSTER_NAME>            # Set via Terraform set block or here
+  clusterEndpoint: <YOUR_CLUSTER_ENDPOINT>    # Set via Terraform set block or here
+  interruptionQueue: <YOUR_SQS_QUEUE_NAME>    # Optional: SQS queue for interruption handling
+
+  # AWS settings
+  aws:
+    defaultInstanceProfile: <YOUR_INSTANCE_PROFILE_NAME>  # Set via Terraform set block or here
+
+# -- Pod settings
+podAnnotations: {}
+podLabels: {}
+
+# -- ServiceAccount settings
+serviceAccount:
+  create: false                               # IRSA managed by Terraform
+  name: karpenter
+  annotations:
+    eks.amazonaws.com/role-arn: <YOUR_KARPENTER_IRSA_ROLE_ARN>
+
+# -- Logging
+controller:
+  logLevel: info
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1000
+  podSecurityContext:
+    fsGroup: 1000
+
+# -- Webhook
+webhook:
+  enabled: true
+  logLevel: info
+
+# -- Metrics
+metricsService:
+  enabled: true
+  annotations: {}
+
+# -- Node affinity/tolerations (optional, for advanced scheduling)
+# tolerations:
+#   - key: "node-role.kubernetes.io/control-plane"
+#     operator: "Exists"
+#     effect: "NoSchedule"
+
+# -- Resources (optional, for resource requests/limits)
+# resources:
+#   requests:
+#     cpu: 100m
+#     memory: 128Mi
+#   limits:
+#     cpu: 500m
+#     memory: 512Mi
+
+# -- Prometheus scraping
+serviceMonitor:
+  enabled: true
+
+# -- Extra environment variables for the controller
+# extraEnv:
+#   - name: AWS_REGION
+#     value: eu-central-1
+
+# -- NodeSelector (optional)
+# nodeSelector: {}
+
+# -- Affinity (optional)
+# affinity: {}
+
+# -- PriorityClassName (optional)
+# priorityClassName: system-cluster-critical
+
+# -- Replicas (optional)
+# replicas: 1
+
+# -- Image pull secrets (optional)
+# imagePullSecrets: []
+
+# -- Additional volumes/mounts (optional)
+# extraVolumes: []
+# extraVolumeMounts: []
+
+# -- PodSecurityContext (optional)
+# podSecurityContext: {}
+# -- SecurityContext (optional)
+# securityContext: {}
+

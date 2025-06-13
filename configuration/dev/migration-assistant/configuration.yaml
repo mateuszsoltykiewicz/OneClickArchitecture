@@ -1,0 +1,59 @@
+environments:
+  uat:
+    aws:
+      region: eu-central-1
+      remote_state:
+        bucket: my-tf-state-bucket
+        key: infra/uat/terraform.tfstate
+
+    databases:
+      # redis:
+      #   enabled: true
+      #   source:
+      #     cluster_id: "uat-redis"
+      #   destination:
+      #     cluster_id: "replicationgroup-redisdevelop-develop-di"
+      #     region: "eu-central-1"
+
+      mongodb:
+        enabled: false
+        source:
+          uri: "mongodb://df:reY4wzQDGR4AEWTe@uat-db-mongodb.cluster-cwdkm5ftgkny.eu-central-1.docdb.amazonaws.com:27017"
+          endpoint: "uat-db-mongodb.cluster-cwdkm5ftgkny.eu-central-1.docdb.amazonaws.com"
+          port: 27017
+          username: "df"
+          password: "reY4wzQDGR4AEWTe"
+        destination:
+          uri: mongodb://dfai:dfaidfaidfaidfai@mongo-mongoevelop-develop-digitalfirstai-active.cluster-cwdkm5ftgkny.eu-central-1.docdb.amazonaws.com:27017" #"mongodb://user:password@uat-mongo-source:27017"
+          endpoint: "mongo-mongoevelop-develop-digitalfirstai-active.cluster-cwdkm5ftgkny.eu-central-1.docdb.amazonaws.com"
+          port: 27017
+          username: "dfai"
+          password: "dfaidfaidfaidfai"
+          subnet_ids: ["subnet-09c612cd9990d567d", "subnet-0f6ea9b9211a38885"]
+          vpc_id: "vpc-0ce9856c033b7a7d9"
+
+      postgresql:
+        enabled: true
+        source:
+          endpoint: "uat-pg-db-v2.cwdkm5ftgkny.eu-central-1.rds.amazonaws.com"
+          port: 5432
+          username: "postgres"
+          password: "xKQLMmy2gR8ea4wCkNjt"
+        destination:
+          endpoint: "postgresdevelop-develop-digitalfirstai-active.cluster-cwdkm5ftgkny.eu-central-1.rds.amazonaws.com"
+          port: 5432
+          username: "dfai"
+          password: "dfaidfaidfaidfai"
+          subnet_ids: ["subnet-09c612cd9990d567d", "subnet-0f6ea9b9211a38885"]
+          vpc_id: "vpc-0ce9856c033b7a7d9"
+
+      qdrant:
+         enabled: true
+         source:
+           url: "http://lb-uat-qdrant-1472197549.eu-central-1.elb.amazonaws.com"
+           #api_key: ""
+         destination:
+           url: "http://host.docker.internal:6333"
+           #api_key: ""
+         batch_size: 64
+         tool: "qdrant-migration"

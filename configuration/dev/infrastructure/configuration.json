@@ -1,0 +1,317 @@
+{
+  "clusters": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "develop-develop-develop-digitalfirstai-active-eu-central-1": [
+          "object",
+          {
+            "ca_certificate": [
+              "object",
+              {
+                "develop-develop-develop-digitalfirstai-active-eu-central-1": "string"
+              }
+            ],
+            "control_plane_security_group_id": [
+              "object",
+              {
+                "develop-develop-develop-digitalfirstai-active-eu-central-1": "string"
+              }
+            ],
+            "endpoint": [
+              "object",
+              {
+                "develop-develop-develop-digitalfirstai-active-eu-central-1": "string"
+              }
+            ],
+            "node_security_group_id": [
+              "object",
+              {
+                "develop-develop-develop-digitalfirstai-active-eu-central-1": "string"
+              }
+            ],
+            "oidc_provider_arn": [
+              "object",
+              {
+                "develop-develop-develop-digitalfirstai-active-eu-central-1": "string"
+              }
+            ],
+            "vpc_name": [
+              "object",
+              {
+                "develop-develop-develop-digitalfirstai-active-eu-central-1": "string"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "value": {
+      "develop-develop-develop-digitalfirstai-active-eu-central-1": {
+        "ca_certificate": {
+          "develop-develop-develop-digitalfirstai-active-eu-central-1": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJWXcweHRoNE04K1V3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TlRBMU1qZ3hOekl6TXpCYUZ3MHpOVEExTWpZeE56STRNekJhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUM3RHlSL2lyWkMwNEhsM3VnYmhlajVNRXB3N21wQkp1c040UTEvVGNUbHNicnF1TFNoQS9DSVlPL1oKb0ovNUN0c2RWbjZzUDAyWFpEaEhtdkdYZlFHY0VUdlNCNW9EbmZSS1NwcTRGakJPUVhDQjBDS1FRbFMyRXdmVQpKS3FZaFFjK3ZDd0dIM2crbzZCb1VJRjl0dndqNDNmZTYvbEVxZGdiV2RYQzJld0wydFYrWlhZbFBjR0hkUDRkClJJbGdxZ3lNZ0FkS29EbXh4Sms2eEdvbWRlUngyaEUyc1hWQ1U2M0lLcjBGNTdabDIwUFIyNlU1VVdnZXNNMFYKd1cvZTRqT240eXhkTWpHNXBVTVJQbUVQS2ppb0dvRnhINkZ0bEtxU1pRazlqMFo2alNQSGd0OXBHT3hWT1M5cQpnUi9QRm9FZkh6RVU0My9wZU1XTkkzMDVSdUFkQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJRQlQvOG8rZ1MvSWk2Qk4wYU43WUxYME1ldnJqQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQXdYT3NrWXVxegpwQjhubDA0N1J3aEZMYi9lNDlmQm1PL2d5enBOTXpGY1o1NSszdGN0TkxKWkhia2pXRUo3UkE0aFRPRUlZaXZjCjEvYk9MUCtySUxTT0Z3YUo2OHRRVGg2L01zWGJhdTY5aXNuVHBITE5IaEV1ZkRxUm1JQy91bHpJWUx4MmRTK1UKTktyMDl4K1BiRDdHU0tweDhuYlNmYVl1ZG84VDNVMWlHekc2M1FlKzhoNGdBZ3pZQWFKdHdLVmRDcmJnV3JpbgplaEpqTFBxZ2NkaWNXajB0UklmQXcrNEExa1BQQUVra2NncHpTVnFiTVptc0QvMTBRYVlOTk1VQnhhbVF5bTZ6Cno0WkUyS21DN3djeHluZzlrM08rNTdkL3lkaVZHQm5VRFZoV2pRbENhc2xsdzNOaHhVVDFHTmFXbWx1M1FXc2gKOG9tTWZrZjdLSUhNCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+        },
+        "control_plane_security_group_id": {
+          "develop-develop-develop-digitalfirstai-active-eu-central-1": "sg-0844a8f7abe7a86ea"
+        },
+        "endpoint": {
+          "develop-develop-develop-digitalfirstai-active-eu-central-1": "https://01E7B2C2CBA03411B73A885E0D35A815.gr7.eu-central-1.eks.amazonaws.com"
+        },
+        "node_security_group_id": {
+          "develop-develop-develop-digitalfirstai-active-eu-central-1": "sg-0601f8fd698bd72a7"
+        },
+        "oidc_provider_arn": {
+          "develop-develop-develop-digitalfirstai-active-eu-central-1": "arn:aws:iam::775292115464:oidc-provider/oidc.eks.eu-central-1.amazonaws.com/id/01E7B2C2CBA03411B73A885E0D35A815"
+        },
+        "vpc_name": {
+          "develop-develop-develop-digitalfirstai-active-eu-central-1": "develop-develop-digitalfirstai-active-eu-central-1"
+        }
+      }
+    }
+  },
+  "network_config": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "0": [
+          "object",
+          {
+            "database_subnet_id": [
+              "object",
+              {
+                "develop-develop-digitalfirstai-active-eu-central-1": [
+                  "tuple",
+                  []
+                ]
+              }
+            ],
+            "endpoint_subnet_id": [
+              "object",
+              {
+                "develop-develop-digitalfirstai-active-eu-central-1": [
+                  "tuple",
+                  []
+                ]
+              }
+            ],
+            "kubernetes_private_subnet_id": [
+              "object",
+              {
+                "develop-develop-digitalfirstai-active-eu-central-1": [
+                  "tuple",
+                  []
+                ]
+              }
+            ],
+            "kubernetes_public_subnet_id": [
+              "object",
+              {
+                "develop-develop-digitalfirstai-active-eu-central-1": [
+                  "tuple",
+                  [
+                    "string",
+                    "string"
+                  ]
+                ]
+              }
+            ],
+            "long_vpc_name": [
+              "object",
+              {
+                "develop-develop-digitalfirstai-active-eu-central-1": "string"
+              }
+            ],
+            "network_config": [
+              "map",
+              [
+                "object",
+                {
+                  "database_subnet_ids": [
+                    "tuple",
+                    []
+                  ],
+                  "endpoint_subnet_ids": [
+                    "tuple",
+                    []
+                  ],
+                  "kubernetes_private_subnet_ids": [
+                    "tuple",
+                    []
+                  ],
+                  "kubernetes_public_subnet_ids": [
+                    "tuple",
+                    []
+                  ],
+                  "private_subnet_ids": [
+                    "tuple",
+                    []
+                  ],
+                  "public_subnet_ids": [
+                    "tuple",
+                    []
+                  ],
+                  "transit_subnet_ids": [
+                    "tuple",
+                    []
+                  ],
+                  "vpc_id": "string"
+                }
+              ]
+            ],
+            "private_subnet_id": [
+              "object",
+              {
+                "develop-develop-digitalfirstai-active-eu-central-1": [
+                  "tuple",
+                  []
+                ]
+              }
+            ],
+            "public_subnet_id": [
+              "object",
+              {
+                "develop-develop-digitalfirstai-active-eu-central-1": [
+                  "tuple",
+                  [
+                    "string",
+                    "string",
+                    "string",
+                    "string"
+                  ]
+                ]
+              }
+            ],
+            "transit_subnet_id": [
+              "object",
+              {
+                "develop-develop-digitalfirstai-active-eu-central-1": [
+                  "tuple",
+                  []
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "value": {
+      "0": {
+        "database_subnet_id": {
+          "develop-develop-digitalfirstai-active-eu-central-1": []
+        },
+        "endpoint_subnet_id": {
+          "develop-develop-digitalfirstai-active-eu-central-1": []
+        },
+        "kubernetes_private_subnet_id": {
+          "develop-develop-digitalfirstai-active-eu-central-1": []
+        },
+        "kubernetes_public_subnet_id": {
+          "develop-develop-digitalfirstai-active-eu-central-1": [
+            "subnet-0ecb090b97e4542bd",
+            "subnet-08d5b594cd6a8f893"
+          ]
+        },
+        "long_vpc_name": {
+          "develop-develop-digitalfirstai-active-eu-central-1": "develop-develop-digitalfirstai-active-eu-central-1"
+        },
+        "network_config": {
+          "vpc-0ce9856c033b7a7d9": {
+            "database_subnet_ids": [],
+            "endpoint_subnet_ids": [],
+            "kubernetes_private_subnet_ids": [],
+            "kubernetes_public_subnet_ids": [],
+            "private_subnet_ids": [],
+            "public_subnet_ids": [],
+            "transit_subnet_ids": [],
+            "vpc_id": "vpc-0ce9856c033b7a7d9"
+          }
+        },
+        "private_subnet_id": {
+          "develop-develop-digitalfirstai-active-eu-central-1": []
+        },
+        "public_subnet_id": {
+          "develop-develop-digitalfirstai-active-eu-central-1": [
+            "subnet-09c612cd9990d567d",
+            "subnet-0f6ea9b9211a38885",
+            "subnet-0ecb090b97e4542bd",
+            "subnet-08d5b594cd6a8f893"
+          ]
+        },
+        "transit_subnet_id": {
+          "develop-develop-digitalfirstai-active-eu-central-1": []
+        }
+      }
+    }
+  },
+  "primary_database_endpoints": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "mongoevelop": [
+          "object",
+          {
+            "mongodb_endpoint": [
+              "object",
+              {
+                "docdb_endpoint": "string"
+              }
+            ],
+            "rds_endpoint": "dynamic",
+            "redis_configuration_endpoint": "dynamic",
+            "redis_endpoint": "dynamic"
+          }
+        ],
+        "postgresdevelop": [
+          "object",
+          {
+            "mongodb_endpoint": "dynamic",
+            "rds_endpoint": [
+              "object",
+              {
+                "rds_endpoint": "string"
+              }
+            ],
+            "redis_configuration_endpoint": "dynamic",
+            "redis_endpoint": "dynamic"
+          }
+        ],
+        "redisdevelop": [
+          "object",
+          {
+            "mongodb_endpoint": "dynamic",
+            "rds_endpoint": "dynamic",
+            "redis_configuration_endpoint": "dynamic",
+            "redis_endpoint": "dynamic"
+          }
+        ]
+      }
+    ],
+    "value": {
+      "mongoevelop": {
+        "mongodb_endpoint": {
+          "docdb_endpoint": "mongo-mongoevelop-develop-digitalfirstai-active.cluster-cwdkm5ftgkny.eu-central-1.docdb.amazonaws.com"
+        },
+        "rds_endpoint": null,
+        "redis_configuration_endpoint": null,
+        "redis_endpoint": null
+      },
+      "postgresdevelop": {
+        "mongodb_endpoint": null,
+        "rds_endpoint": {
+          "rds_endpoint": "postgresdevelop-develop-digitalfirstai-active.cluster-cwdkm5ftgkny.eu-central-1.rds.amazonaws.com"
+        },
+        "redis_configuration_endpoint": null,
+        "redis_endpoint": null
+      },
+      "redisdevelop": {
+        "mongodb_endpoint": null,
+        "rds_endpoint": null,
+        "redis_configuration_endpoint": null,
+        "redis_endpoint": null
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+global:
+  amazon_side_asn: 64512
+  domain_root: testdigitalfirst.com
+networking:
+  - vpc_name: "develop"
+    cidr_block: "10.1.0.0/16"
+    azs:
+      - "eu-central-1a"
+      - "eu-central-1b"
+    subnets:
+      - purpose: "Database"
+        tier: "Public"
+      - purpose: "Kubernetes"
+        tier: "Public"
+database:
+  - db_type: "mongodb"
+    db_name: "mongoevelop"
+    vpc_name: "develop"
+  - db_type: "postgresql"
+    db_name: "postgresdevelop"
+    vpc_name: "develop"
+  - db_type: "elasticache"
+    db_name: "redisdevelop"
+    vpc_name: "develop"
+kubernetes:
+  - cluster_name: "develop"
+    vpc_name: "develop"
