@@ -1,0 +1,15 @@
+{
+  "source": {
+    "endpoint": "your-rds-endpoint.rds.amazonaws.com",
+    "port": 5432,
+    "username": "postgres",
+    "password": "ZrQrQbj7djxAlC3qs5up",
+    "database": "df_db"
+  },
+  "gcp": {
+    "project_id": "your-project",
+    "instance_name": "your-cloudsql-instance",
+    "database_name": "yourdb",
+    "bucket_name": "your-bucket"
+  }
+}
