@@ -16,6 +16,7 @@ JOBS="${6:-$(nproc)}"  # Default: use all available CPUs
 
 DUMP_DIR="./pg_dumpdir"
 LOG_FILE="migration.log"
+COMPARE_SCRIPT="compare_tables.py"
 
 if [ $# -lt 5 ]; then
   echo "Usage: $0 <SRC_DB_HOST> <SRC_DB_PASSWORD> <DST_DB_HOST> <DST_DB_PASSWORD> <DB_NAME> [JOBS]"
@@ -39,6 +40,20 @@ if ! command -v pg_dump >/dev/null 2>&1 || ! command -v pg_restore >/dev/null 2>
   echo "Installing PostgreSQL client tools..." | tee -a "$LOG_FILE"
   sudo dnf install -y postgresql16
 fi
+
+# Install Python dependencies for table comparison
+if ! command -v python3 >/dev/null 2>&1; then
+  echo "Installing Python3..." | tee -a "$LOG_FILE"
+  sudo dnf install -y python3
+fi
+
+if ! command -v pip3 >/dev/null 2>&1; then
+  echo "Installing pip..." | tee -a "$LOG_FILE"
+  sudo dnf install -y python3-pip
+fi
+
+echo "Installing psycopg2-binary..." | tee -a "$LOG_FILE"
+sudo pip3 install psycopg2-binary
 
 # Initialize log file
 : > "$LOG_FILE"
@@ -65,7 +80,7 @@ echo "Starting parallel pg_dump from $SRC_DB_HOST..." | tee -a "$LOG_FILE"
 rm -rf "$DUMP_DIR"
 
 # Execute dump with real-time error display and correct pipe status
-if ! pg_dump -h "$SRC_DB_HOST" -U postgres -d "$DB_NAME" -F d -j "$JOBS" -b -v -f "$DUMP_DIR" 2>&1 | tee -a "$LOG_FILE"; then
+if ! pg_dump -h "$SRC_DB_HOST" -U postgres -d "$DB_NAME" -b -F d -j "$JOBS" -b -v -f "$DUMP_DIR" 2>&1 | tee -a "$LOG_FILE"; then
   echo "pg_dump failed with exit code ${PIPESTATUS[0]}. Check $LOG_FILE for details." | tee -a "$LOG_FILE"
   exit 1
 fi
@@ -101,3 +116,22 @@ if ! pg_restore -h "$DST_DB_HOST" -U postgres -d "$DB_NAME" -j "$JOBS" -v "$DUMP
   echo "pg_restore failed with exit code ${PIPESTATUS[0]}. Check $LOG_FILE for details." | tee -a "$LOG_FILE"
   exit 1
 fi
+
+# Run table comparison
+echo -e "\nValidating table counts..." | tee -a "$LOG_FILE"
+export SRC_DB_HOST DST_DB_HOST SRC_DB_PASSWORD DST_DB_PASSWORD DB_NAME
+if ! python3 "./comprehensive_validation.py" 2>&1 | tee -a "$LOG_FILE"; then
+  echo "ERROR: Table validation failed! Source and destination tables don't match." | tee -a "$LOG_FILE"
+  exit 1
+fi
+
+echo "Validation successful! Table counts match." | tee -a "$LOG_FILE"
+
+
+# prod-v2-backup.cwdkm5ftgkny.eu-central-1.rds.amazonaws.com
+# ZrQrQbj7djxAlC3qs5up 
+
+# 10.27.241.3 
+# dfaidfaidfaidfai
+
+# df_db
